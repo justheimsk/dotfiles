@@ -1,20 +1,20 @@
 return {
-	{
+  {
     lazy = false,
-		"neovim/nvim-lspconfig",
-		config = function()
-			require("config/lspconfig")
-		end
-	},
-	{
-		"williamboman/mason.nvim",
-		config = function()
-			require("mason").setup{}
-		end
-	},
+    "neovim/nvim-lspconfig",
+    config = function()
+      require("config/lspconfig")
+    end
+  },
+  {
+    "williamboman/mason.nvim",
+    config = function()
+      require("mason").setup {}
+    end
+  },
   {
     "windwp/nvim-autopairs",
-    config = function ()
+    config = function()
       require("nvim-autopairs").setup()
     end
   },
@@ -30,5 +30,5 @@ return {
     config = function()
       require("config/cmp")
     end
-  }
+  },
 }

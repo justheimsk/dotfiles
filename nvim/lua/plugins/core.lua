@@ -58,17 +58,25 @@ return {
       require("fzf-lua").setup({})
     end
   },
+  -- {
+  --   "navarasu/onedark.nvim",
+  --   config = function ()
+  --     local theme = require("onedark")
+  --     theme.setup({
+  --       style = "darker"
+  --     })
+  --
+  --     theme.load()
+  --   end
+  -- },
   {
-    "navarasu/onedark.nvim",
+    "CosmicNvim/cosmic-ui",
+    dependencies = { "MunifTanjim/nui.nvim", "nvim-lua/plenary.nvim" },
     config = function ()
-      local theme = require("onedark")
-      theme.setup({
-        style = "darker"
-      })
-
-      theme.load()
+      require("cosmic-ui").setup()
     end
-  }
+  },
+  'pteroctopus/faster.nvim'
   -- {
   --   "olimorris/codecompanion.nvim",
   --   dependencies = {

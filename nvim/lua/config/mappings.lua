@@ -1,6 +1,8 @@
 require("which-key").add({
   { "<leader>w", "<cmd>w<cr>", desc = "Write buffer" },
-  { "<leader>d", "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", desc = "Format buffer" },
+  { "<leader>c", group = "Code actions" },
+  { "<leader>ca", "<cmd>lua require('cosmic-ui').code_actions()<cr>", desc = "Code actions UI" },
+  { "<leader>cf", "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", desc = "Format code" },
   { "<leader>e", "<cmd>NvimTreeFocus<cr>", desc = "File Explorer" },
   { "<leader>t", group = "Terminal" },
   { "<leader>tt", "<cmd>ToggleTerm<cr>", desc = "Open terminal" },
