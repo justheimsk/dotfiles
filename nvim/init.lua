@@ -1,5 +1,3 @@
-vim.loader.enable()
-vim.g.mapleader = "<Space>"
 vim.cmd('set shiftwidth=2')
 vim.cmd('set number')
 vim.wo.relativenumber = true
@@ -10,5 +8,8 @@ vim.cmd [[
   set expandtab
 ]]
 
-require("config/neovide")
-require("config/lazy")
+require("configs/lazy")
+require("configs/coc");
+
+vim.o.background = "dark"
+vim.cmd([[colorscheme gruvbox]])
