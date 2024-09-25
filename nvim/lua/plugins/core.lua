@@ -5,9 +5,8 @@ return {
     opts = {}
   },
   {
-    'ms-jpq/chadtree',
-    event = 'VeryLazy',
-    build = 'python3 -m chadtree deps'
+    'nvim-tree/nvim-tree.lua',
+    config = true
   },
   {
     'nvim-lualine/lualine.nvim',
