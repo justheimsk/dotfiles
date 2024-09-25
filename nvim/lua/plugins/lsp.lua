@@ -6,9 +6,4 @@ return {
       require("configs/coc")
     end
   },
-  -- {
-  --   'windwp/nvim-autopairs',
-  --   event = "InsertEnter",
-  --   config = true
-  -- }
 }
