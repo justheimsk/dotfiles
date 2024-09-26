@@ -1,7 +1,7 @@
 require("which-key").add({
   { "<leader>w",  "<cmd>w<cr>",                                        desc = "Write buffer" },
   { "<leader>c",  group = "Code actions" },
-  { "<leader>ca", "<cmd>call CocActionAsync('doQuickfix')<cr>",        desc = "Code actions UI" },
+  { "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<cr>",            desc = "Code actions UI" },
   { "<leader>cf", "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", desc = "Format code" },
   { "<leader>e",  "<cmd>NvimTreeFocus<cr>",                            desc = "File Explorer" },
   { "<leader>t",  group = "Terminal" },
