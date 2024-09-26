@@ -9,5 +9,7 @@ vim.cmd [[
 ]]
 
 require("configs/lazy")
+require("configs/coc");
+
 vim.o.background = "dark"
 vim.cmd([[colorscheme gruvbox]])

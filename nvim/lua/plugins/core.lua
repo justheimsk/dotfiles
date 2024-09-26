@@ -40,11 +40,5 @@ return {
   {
     "xiyaowong/transparent.nvim",
     config = true
-  },
-  {
-    'vyfor/cord.nvim',
-    build = './build',
-    event = 'VeryLazy',
-    opts = {},
   }
 }
