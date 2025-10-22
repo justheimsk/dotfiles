@@ -1,9 +1,6 @@
-vim.g.mapleader = " "
+require("config.lazy")
+require("config.keymap")
 
-require("configs.lazy")
-require("configs.keymaps")
-
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.signcolumn = "number"
-vim.opt.ignorecase = true
+vim.cmd("colorscheme oxocarbon")
+vim.cmd("set number rnu")
+vim.diagnostic.config({ virtual_text = true })

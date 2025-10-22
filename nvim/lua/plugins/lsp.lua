@@ -1,60 +1,29 @@
 return {
+	"nvim-treesitter/nvim-treesitter",
+	{
+		'windwp/nvim-autopairs',
+		event = "InsertEnter",
+		config = true
+		-- use opts = {} for passing setup options
+		-- this is equivalent to setup({}) function
+	},
+	{
+		"mason-org/mason-lspconfig.nvim",
+		opts = {},
+		dependencies = {
+			{ "mason-org/mason.nvim", opts = {} },
+			"neovim/nvim-lspconfig",
+		},
+	},
 	'neovim/nvim-lspconfig',
 	{
-		'nvim-treesitter/nvim-treesitter',
-		event = "VeryLazy",
-		lazy = true,
-		config = function()
-			require('configs.treesitter')
-		end
-	},
-	{
-		'sontungexpt/better-diagnostic-virtual-text',
-		event = "VeryLazy",
-		lazy = true,
-		config = function(_)
-			require('better-diagnostic-virtual-text').setup({
-				inline = false
-			})
-		end
-	},
-	{
-		'ZhiyuanLck/smart-pairs',
-		event = 'InsertEnter',
-		config = function()
-			require('pairs'):setup()
-		end
-	},
-	{
-		'williamboman/mason.nvim',
-		dependencies = {
-			{
-				'williamboman/mason-lspconfig.nvim',
-				event = "VeryLazy",
-				lazy = true
-			}
-		},
-		event = "VeryLazy",
-		lazy = true,
-		config = function()
-			require('configs.lspconfig')
-		end
-	},
-	{
 		'saghen/blink.cmp',
-		-- optional: provides snippets for the snippet source
-		dependencies = {
-			{
-				'rafamadriz/friendly-snippets',
-				event = "VeryLazy",
-				lazy = true
-			}
-		},
 		event = "VeryLazy",
-		lazy = true,
+		-- optional: provides snippets for the snippet source
+		dependencies = { 'rafamadriz/friendly-snippets' },
 
 		-- use a release tag to download pre-built binaries
-		version = '*',
+		version = '1.*',
 		-- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
 		-- build = 'cargo build --release',
 		-- If you use nix, you can build from source using latest nightly rust with:
@@ -82,6 +51,9 @@ return {
 				-- Adjusts spacing to ensure icons are aligned
 				nerd_font_variant = 'mono'
 			},
+
+			-- (Default) Only show the documentation popup when manually triggered
+			completion = { documentation = { auto_show = false } },
 
 			-- Default list of enabled providers defined so that you can extend it
 			-- elsewhere in your config, without redefining it, due to `opts_extend`
